@@ -44,8 +44,12 @@ public class SearchResults extends BasePage {
 
 
     public void clickLanguageFilter(){
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(languageFilter));
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(languageFilter));
         languageFilter.click();
+//        new WebDriverWait(driver, Duration.ofSeconds(15))
+//                .until(ExpectedConditions.visibilityOfElementLocated (By.xpath("//div[contains(text(),'Language')]")));
+//        WebElement languageFilter = driver.findElement(By.xpath("//div[contains(text(),'Language')]"));
+//        languageFilter.click();
     }
 
     public void clickEnglishCheckbox(){

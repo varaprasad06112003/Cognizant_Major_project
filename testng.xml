@@ -4,10 +4,7 @@
     <listeners>
         <listener class-name="utilities.ExtentReportManager"/>
     </listeners>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="Chrome"/>
     <test verbose="2" name="TEST1">

@@ -29,8 +29,8 @@ public class BaseClass {
     protected static ExtentReports extent;
 
     @BeforeSuite
-    @Parameters({"os","browser"})
-    public void setup(String os, String browser) throws IOException {
+//    @Parameters({"os","browser"})
+    public void setup() throws IOException {
         //Loading config.properties file
         logger = LogManager.getLogger(this.getClass());
 
@@ -39,23 +39,24 @@ public class BaseClass {
         p=new Properties();
         p.load(file);
 
-        switch(browser.toLowerCase()){
-            case "chrome":
-                driver = new ChromeDriver();
-                break;
-            case "edge":
-                // Setup EdgeDriver
-                driver = new EdgeDriver();
-                break;
-            case "firefox":
-                // Setup FirefoxDriver
-                driver = new FirefoxDriver();
-                break;
-            default:
-                logger.error("Browser not supported: " + browser);
-                System.out.println("Invalid browser! Supported browsers are: chrome, edge, firefox.");
-                return;
-        }
+//        switch(browser.toLowerCase()){
+//            case "chrome":
+//                driver = new ChromeDriver();
+//                break;
+//            case "edge":
+//                // Setup EdgeDriver
+//                driver = new EdgeDriver();
+//                break;
+//            case "firefox":
+//                // Setup FirefoxDriver
+//                driver = new FirefoxDriver();
+//                break;
+//            default:
+//                logger.error("Browser not supported: " + browser);
+//                System.out.println("Invalid browser! Supported browsers are: chrome, edge, firefox.");
+//                return;
+//        }
+        driver = new ChromeDriver();
 
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

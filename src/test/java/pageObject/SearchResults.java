@@ -15,7 +15,7 @@ public class SearchResults extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[text()='Language']")
+    @FindBy(xpath = "//div[@class='css-16tmax3' and text()='Language']")
     WebElement languageFilter;
 
     @FindBy(xpath = "//span[text()='English']")
